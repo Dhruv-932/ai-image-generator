@@ -1,6 +1,15 @@
-import React from 'react'
+import React from "react";
 
-const FormField = ({labelName, type, name, placeholder, value, handleChange, isSurpriseMe, handleSurpriseMe }) => {
+const FormField = ({
+  labelName,
+  type,
+  name,
+  placeholder,
+  value,
+  handleChange,
+  isSurpriseMe,
+  handleSurpriseMe,
+}) => {
   return (
     <div>
       <div className="flex items-center gap-2 mb-2">
@@ -12,14 +21,13 @@ const FormField = ({labelName, type, name, placeholder, value, handleChange, isS
         </label>
         {isSurpriseMe && (
           <button
-            type='button'
+            type="button"
             onClick={handleSurpriseMe}
-            className="font-semibold text-xs bg-[#ECECF1] py-1 px-2 rounded-[5px] text-black" 
+            className="font-semibold text-xs bg-yellow-500 py-1 px-2 rounded-[5px] text-white hover:bg-yellow-600"
           >
             Surprise Me
           </button>
         )}
-
       </div>
       <input
         type={type}
@@ -29,11 +37,10 @@ const FormField = ({labelName, type, name, placeholder, value, handleChange, isS
         value={value}
         onChange={handleChange}
         required
-        className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#4649ff] focus:border-[#4649ff] outline-none block w-full p-3'
+        className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 outline-none block w-full p-3"
       />
-
     </div>
   );
-}
+};
 
-export default FormField
+export default FormField;
